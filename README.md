@@ -1,1 +1,1 @@
-# Seattle-Real-Estate-Sales-Analysis
+# SQL Projects
