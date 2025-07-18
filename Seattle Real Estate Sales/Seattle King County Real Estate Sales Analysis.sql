@@ -2,14 +2,14 @@ USE house_sales;
 
 -- Average house price by number of bedrooms
 SELECT 
-	bedrooms, ROUND(AVG(price), 2) AS avg_price
+	bedrooms, CONCAT('$', ROUND(AVG(price), 2)) AS avg_price
 FROM housedata
 GROUP BY bedrooms
 ORDER BY bedrooms;
 
 -- Top 10 most expensive houses
 SELECT
-	id, price, bedrooms, bathrooms, sqft_living, zipcode
+	id, CONCAT('$', price), bedrooms, bathrooms, sqft_living, zipcode
 FROM housedata
 ORDER BY price DESC
 LIMIT 10;
@@ -22,7 +22,7 @@ GROUP BY waterfront;
 
 -- Average prie by condition
 SELECT
-	housedata.condition, ROUND(AVG(price),2) AS avg_price
+	housedata.condition, CONCAT('$', ROUND(AVG(price),2)) AS avg_price
 FROM housedata
 GROUP BY housedata.condition
 ORDER BY avg_price DESC;
@@ -49,7 +49,7 @@ ORDER BY grade;
 
 -- Zip codes with the highest average home price
 SELECT
-	zipcode, ROUND(AVG(price),2) AS avg_price
+	zipcode, CONCAT( '$', ROUND(AVG(price),2)) AS avg_price
 FROM housedata
 GROUP BY zipcode
 ORDER BY avg_price DESC
@@ -57,7 +57,7 @@ LIMIT 10;
 
 -- Average price per square foot (living area)
 SELECT
-	ROUND(AVG(price/sqft_living),2) AS avg_price_per_sqft
+	CONCAT('$', ROUND(AVG(price/sqft_living),2)) AS avg_price_per_sqft
 FROM housedata;
 
 -- Monthly sales volume (number of homes sold per month)
