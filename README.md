@@ -17,7 +17,7 @@ Analyze house sale trends in King County, WA to identify price drivers and marke
 **Results:**  
 - Identified highest average prices by zip code and property condition
 - Observed strong market activity in newer and high-grade homes
-- Created a dynamic dashboard for temporal and geographic filtering
+- Created an interactive dashboard for temporal and geographic filtering
 
 **[Tableau Dashboard](https://public.tableau.com/app/profile/mitchell.okere/viz/SeattleRealEstateSales_17527461754040/RealEstateSales)**
 
